@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+:root {
+    --primario: #22333b;
+    --gris: #778da9;
+    --blanco: #ffff;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /* Esto para que 1rem = 10px */
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    /* background-color: var(--primario); */
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.6rem;
+    line-height: 2;
+}
+h1 {
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 900;
+}
+
+/* GLOBALES */
+.contenedor {
+    width: min(90%, 120rem);
+    margin: 0 auto;
+}
+
+.boton {
+    display: block;
+    /* Es block para que cuando se visualice en una pantalla pequeña tome todo el espacio dispobible */
+    text-align: center;
+    padding: 1rem 3rem;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+    border: none;
+    margin-top: 3rem;
+}
+
+img,.boton:hover { cursor: pointer; }
+
+/* SOBRE NOSOTROS */
+@media (min-width: 768px) {
+    section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+}
+
+img { width: 2rem;}
+
+.formulario {
+    margin: -5rem auto 0 auto;
+    /* Da margin hacia arriba */
+    width: 95%;
+    padding: 5rem;
+    /* color: var(--blanco); */
+}
+
+.campo {
+    display: flex;
+    margin-top: 5rem;
+}
+
+.campo__label {
+    flex: 0 0 9rem;
+    text-align: right;
+    padding-right: 2rem;
+}
+
+.campo__field {
+    flex: .8;
+    border: 2px solid var(--gris);
+    background-color: var(--gris);
+    border-radius: 1rem;
+    padding: 1rem;
+}
+.campo__field::placeholder { color: var(--blanco); }
+
+table {
+    padding: 1rem;
+    text-align: center;
+    border-spacing: 0;
+}
+tr, th, td { 
+    padding: 1rem;
+    height: 1rem;
+}
+thead {
+    background-color:bisque;
+    border-radius: 1rem;
+}
